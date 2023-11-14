@@ -1,16 +1,16 @@
-# This is a sample Python script.
+import streamlit as st
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+col1, col2 = st.columns(2)
 
+with col1:
+    st.image("images/photo.jpg")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+with col2:
+    st.title("Aria Noorghorbani")
+    content = """
+    As a dedicated Frontend Developer, I specialize in crafting functional and user-friendly applications that cater to diverse client needs. With four years of hands-on experience in JavaScript development, I've honed my skills in Angular, Node.js, and Bootstrap to deliver top-notch solutions.
 
+My journey began with a background in Physics. Still, my passion for computer science led me to a transformative decision - I left my university course to pursue a career in web development. Along the way, I've accumulated multiple certifications from reputable platforms like Meta, Udemy, LinkedIn, and Coursera.
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+I thrive on learning, evolving, and embracing new concepts and technologies. My commitment to helping others and resolving challenges with innovative solutions is at the core of my professional ethos. I'm a proactive and collaborative team player, driven by the pursuit of excellence in every project."""
+    st.write(content)
