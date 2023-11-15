@@ -26,14 +26,20 @@ content2 = """I thrive on learning, evolving, and embracing new concepts and tec
 oI thrive on learning, evolving, and embracing new concepts and technologies. My commitment to helping o"""
 st.write(content2)
 
-col3, col4 = st.columns(2)
+col3, empty_space, col4 = st.columns([1.5, 0.5, 1.5])
 
 df = pandas.read_csv("data.csv", sep=';')
 
 with col3:
     for index, row in df[:10].iterrows():
         st.header(row["title"])
+        st.write(row["description"])
+        st.image(image=f"images/{row['image']}")
+        st.write(f"[Source Code]({row['url']})")
+
 
 with col4:
     for index, row in df[10:].iterrows():
         st.header(row["title"])
+        st.write(row["description"])
+        st.image(image=f"images/{row['image']}")
